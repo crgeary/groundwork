@@ -1,0 +1,20 @@
+{
+  "name": "groundwork-grid",
+  "description": "Groundwork grid system for SASS & CSS",
+  "version": "0.1.0",
+  "main": "sass/_grid.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:sass": "node-sass --output-style expanded --indent-width 4 sass/groundwork.scss css/groundwork.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:chrisgeary92/groundwork.git"
+  },
+  "author": "Christopher Geary <dev@crgeary.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.3.0"
+  }
+}
