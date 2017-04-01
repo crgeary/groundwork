@@ -6,7 +6,7 @@ Groundwork is a lightweight, responsive, [BEM](http://getbem.com/) inspired, CSS
 
 ## Roadmap
 
-- [ ] Add fixed width containers
+- [x] Add fixed width containers
 - [ ] Convert to @mixins
 - [ ] Tests
 
@@ -17,6 +17,7 @@ Groundwork [variables](sass/_variables.scss) can be overwritten to suit your gri
 ````scss
 $groundwork-columns: 12;
 $groundwork-gutter-width: 20px;
+$groundwork-container-gutter: $groundwork-gutter-width * 2;
 $groundwork-breakpoints: (xs, 576px), (sm, 768px), (md, 992px), (lg, 1200px);
 
 $groundwork-class-container: 'container';
@@ -40,6 +41,16 @@ Groundwork classes are heavily based on [Bootstrap classes](https://getbootstrap
         <div class="column column--sm-3 column--xs-4">
             
         </div>
+    </div>
+</div>
+````
+
+If you would prefer fluid containers, you can use `.container--fluid`, an examples is below:
+
+````html
+<div class="container container--fluid">
+    <div class="row">
+        
     </div>
 </div>
 ````
