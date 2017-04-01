@@ -1,9 +1,6 @@
 .container {
     padding-left: 10px;
     padding-right: 10px;
-}
-
-.container:not(.container--fluid) {
     margin-left: auto;
     margin-right: auto;
 }
