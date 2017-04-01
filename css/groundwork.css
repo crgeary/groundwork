@@ -3,6 +3,35 @@
     padding-right: 10px;
 }
 
+.container:not(.container--fluid) {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 576px) {
+    .container:not(.container--fluid) {
+        width: 536px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container:not(.container--fluid) {
+        width: 728px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container:not(.container--fluid) {
+        width: 952px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container:not(.container--fluid) {
+        width: 1160px;
+    }
+}
+
 .row {
     margin-left: -10px;
     margin-right: -10px;

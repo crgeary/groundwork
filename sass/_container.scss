@@ -4,3 +4,14 @@
         right: ($groundwork-gutter-width/2);
     }
 }
+
+.#{$groundwork-class-container}:not(.container--fluid) {
+    margin: {
+        left: auto; right: auto;
+    }
+    @each $size, $breakpoint in $groundwork-breakpoints {
+        @media (min-width: $breakpoint) {
+            width: ($breakpoint - $groundwork-container-gutter);
+        }
+    }
+}
