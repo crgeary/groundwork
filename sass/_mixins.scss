@@ -1,10 +1,11 @@
 @mixin groundwork-container($gutter-width: $groundwork-gutter-width) {
     padding: {
-        left: ($groundwork-gutter-width/2);
-        right: ($groundwork-gutter-width/2);
+        left: ($groundwork-gutter-width / 2);
+        right: ($groundwork-gutter-width / 2);
     }
     margin: {
-        left: auto; right: auto;
+        left: auto;
+        right: auto;
     }
 }
 
@@ -18,19 +19,23 @@
 
 @mixin groundwork-row($gutter-width: $groundwork-gutter-width) {
     margin: {
-        left: ($gutter-width/2) * -1;
-        right: ($gutter-width/2) * -1;
+        left: ($gutter-width / 2) * -1;
+        right: ($gutter-width / 2) * -1;
     }
 
-    &:after { content: ''; clear: both; display: block; }
+    &::after {
+        content: '';
+        clear: both;
+        display: block;
+    }
 }
 
 @mixin groundwork-column-core($gutter-width: $groundwork-gutter-width) {
     box-sizing: border-box;
     min-height: 1px;
     padding: {
-        left: ($gutter-width/2);
-        right: ($gutter-width/2);
+        left: ($gutter-width / 2);
+        right: ($gutter-width / 2);
     }
 }
 
@@ -47,5 +52,5 @@
 }
 
 @mixin groundwork-column($size, $columns: $groundwork-columns) {
-    width: percentage($size/$columns);
+    width: percentage($size / $columns);
 }
