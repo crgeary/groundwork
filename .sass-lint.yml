@@ -1,0 +1,22 @@
+files:
+  include: 'sass/**/*.scss'
+options:
+  merge-default-rules: true
+rules:
+  bem-depth:
+    - 2
+    - max-depth: 1
+  class-name-format:
+    - 2
+    - convention: hyphenatedbem
+  indentation:
+    - 2
+    - size: 4
+  empty-args:
+    - 1
+    - include: true
+  force-pseudo-nesting: 0
+  no-trailing-whitespace: 0
+  property-sort-order: 0
+  quotes: 0
+  no-important: 0
