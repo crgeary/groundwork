@@ -7,25 +7,25 @@
 
 @media (min-width: 576px) {
     .container:not(.container--fluid) {
-        width: 536px;
+        width: 556px;
     }
 }
 
 @media (min-width: 768px) {
     .container:not(.container--fluid) {
-        width: 728px;
+        width: 748px;
     }
 }
 
 @media (min-width: 992px) {
     .container:not(.container--fluid) {
-        width: 952px;
+        width: 972px;
     }
 }
 
 @media (min-width: 1200px) {
     .container:not(.container--fluid) {
-        width: 1160px;
+        width: 1180px;
     }
 }
 

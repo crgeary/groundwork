@@ -1,0 +1,51 @@
+@mixin groundwork-container($gutter-width: $groundwork-gutter-width) {
+    padding: {
+        left: ($groundwork-gutter-width/2);
+        right: ($groundwork-gutter-width/2);
+    }
+    margin: {
+        left: auto; right: auto;
+    }
+}
+
+@mixin groundwork-container-breakpoints($gutter-width: $groundwork-gutter-width, $breakpoints: $groundwork-breakpoints) {
+    @each $size, $breakpoint in $breakpoints {
+        @media (min-width: $breakpoint) {
+            width: ($breakpoint - $gutter-width);
+        }
+    }
+}
+
+@mixin groundwork-row($gutter-width: $groundwork-gutter-width) {
+    margin: {
+        left: ($gutter-width/2) * -1;
+        right: ($gutter-width/2) * -1;
+    }
+
+    &:after { content: ''; clear: both; display: block; }
+}
+
+@mixin groundwork-column-core($gutter-width: $groundwork-gutter-width) {
+    box-sizing: border-box;
+    min-height: 1px;
+    padding: {
+        left: ($gutter-width/2);
+        right: ($gutter-width/2);
+    }
+}
+
+@mixin groundwork-column-class-builder($size, $columns: $groundwork-columns, $class-column: $groundwork-class-column) {
+    $selector: '';
+
+    @for $i from 1 through $columns {
+        $selector: "#{$selector}" + ".#{$class-column}--#{$size}-#{$i}, ";
+    }
+
+    #{$selector} {
+        @content;
+    }
+}
+
+@mixin groundwork-column($size, $columns: $groundwork-columns) {
+    width: percentage($size/$columns);
+}

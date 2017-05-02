@@ -7,7 +7,7 @@ Groundwork is a lightweight, responsive, [BEM](http://getbem.com/) inspired, CSS
 ## Roadmap
 
 - [x] Add fixed width containers
-- [ ] Convert to @mixins
+- [x] Convert to @mixins
 - [ ] Tests
 
 ## Configuration

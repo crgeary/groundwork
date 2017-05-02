@@ -1,17 +1,7 @@
 .#{$groundwork-class-container} {
-    padding: {
-        left: ($groundwork-gutter-width/2);
-        right: ($groundwork-gutter-width/2);
-    }
-    margin: {
-        left: auto; right: auto;
-    }
+    @include groundwork-container();
 }
 
 .#{$groundwork-class-container}:not(.container--fluid) {
-    @each $size, $breakpoint in $groundwork-breakpoints {
-        @media (min-width: $breakpoint) {
-            width: ($breakpoint - $groundwork-container-gutter);
-        }
-    }
+    @include groundwork-container-breakpoints();
 }

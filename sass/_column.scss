@@ -1,22 +1,11 @@
 .#{$groundwork-class-column} {
-    box-sizing: border-box;
-    min-height: 1px;
-    padding: {
-        left: ($groundwork-gutter-width/2);
-        right: ($groundwork-gutter-width/2);
-    }
+    @include groundwork-column-core();
 }
 
 @each $size, $breakpoint in $groundwork-breakpoints {
     @media (min-width: $breakpoint) {
-
-        $selector: '';
-
-        @for $i from 1 through $groundwork-columns {
-            $selector: "#{$selector}" + ".#{$groundwork-class-column}--#{$size}-#{$i}, ";
-        }
-
-        #{$selector} {
+        
+        @include groundwork-column-class-builder($size) {
             float: left;
         }
 
@@ -26,7 +15,7 @@
 
         @for $i from 1 through $groundwork-columns {
             .#{$groundwork-class-column}--#{$size}-#{$i} {
-                width: percentage(($i/$groundwork-columns));
+                @include groundwork-column($i);
             }
         }
     }
