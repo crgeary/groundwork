@@ -2,6 +2,7 @@ $groundwork-columns: 12 !default;
 $groundwork-gutter-width: 20px !default;
 $groundwork-container-gutter: $groundwork-gutter-width * 2 !default;
 $groundwork-breakpoints: (xs, 576px), (sm, 768px), (md, 992px), (lg, 1200px) !default;
+$groundwork-offsets: (xs, sm, md, lg) !default;
 
 $groundwork-class-container: 'container' !default;
 $groundwork-class-row: 'row' !default;

@@ -54,3 +54,7 @@
 @mixin groundwork-column($size, $columns: $groundwork-columns) {
     width: percentage($size / $columns);
 }
+
+@mixin groundwork-offset($size, $columns: $groundwork-columns) {
+    margin-left: percentage($size / $columns);
+}

@@ -14,6 +14,14 @@
         }
 
         @for $i from 1 through $groundwork-columns {
+            @if contains($groundwork-offsets, $size) {
+                .#{$groundwork-class-column}--#{$size}-offset-#{$i} {
+                    @include groundwork-offset($i);
+                }
+            }
+        }
+
+        @for $i from 1 through $groundwork-columns {
             .#{$groundwork-class-column}--#{$size}-#{$i} {
                 @include groundwork-column($i);
             }

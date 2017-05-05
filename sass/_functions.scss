@@ -1,0 +1,3 @@
+@function contains($items, $var) {
+    @return (null != index($items, $var));
+}
